@@ -1,5 +1,21 @@
 .music-player-card {
+  box-sizing: border-box;
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  z-index: 90;
+  width: min(420px, calc(100vw - 48px));
+  padding: 14px;
   overflow: hidden;
+  color: var(--font-color, #2f3437);
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+body {
+  padding-bottom: 190px;
 }
 
 .music-player-headline {
@@ -25,13 +41,25 @@
 .music-player-frame {
   display: block;
   width: 100%;
-  height: 86px;
+  height: 152px;
+  min-height: 152px;
   margin-top: 8px;
   border: 0;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    padding-bottom: 230px;
+  }
+
+  .music-player-card {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    width: calc(100vw - 24px);
+    padding: 10px;
+  }
+
   .music-player-frame {
     min-width: 0;
   }
