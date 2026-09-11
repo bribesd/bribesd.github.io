@@ -1,0 +1,38 @@
+.music-player-card {
+  overflow: hidden;
+}
+
+.music-player-headline {
+  display: flex;
+  align-items: center;
+}
+
+.music-player-headline > span {
+  flex: 1;
+}
+
+.music-player-source {
+  color: inherit;
+  font-size: 0.9em;
+  opacity: 0.72;
+  transition: opacity 0.2s ease;
+}
+
+.music-player-source:hover {
+  opacity: 1;
+}
+
+.music-player-frame {
+  display: block;
+  width: 100%;
+  height: 86px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .music-player-frame {
+    min-width: 0;
+  }
+}
